@@ -54,7 +54,7 @@ public class Transaksi {
         System.out.println("Meja : "+noMeja);
         System.out.println("============================");
         for (int i = 0; i < pesanan.size(); i++) {
-            Pesanan psn = pesanan.get(1);
+            Pesanan psn = pesanan.get(i);
             Menu m = psn.getMenu();
             String pesanan = psn.getJumlah() + " " + m.getNama_menu() + "\t" + (m.getHarga()*psn.getJumlah());
 
@@ -105,6 +105,6 @@ public class Transaksi {
     }
 
     public double hitungKembalian(double uang_bayar) {
-        return uang_bayar = totalBayar; //bisa dibuat validator?
+        return uang_bayar - totalBayar; //bisa dibuat validator?
     }
 }

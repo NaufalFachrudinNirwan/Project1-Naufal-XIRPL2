@@ -18,10 +18,10 @@ public class DaftarMenu {
     public void getMenuByKategori(String kategori) {
         System.out.println("======== " + kategori + " ========");
 
-        for (int i = 1; i < daftarMenu.size(); i++) {
+        for (int i = 0; i < daftarMenu.size(); i++) {
             Menu m = daftarMenu.get(i);
             if (m.getKategori().equals((kategori))) {
-                System.out.println((i) + ". " + m.getNama_menu() + "\t" + m.getHarga());
+                System.out.println((i+1) + ". " + m.getNama_menu() + "\t" + m.getHarga());
             }
         }
     }
